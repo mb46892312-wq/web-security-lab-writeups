@@ -1,0 +1,4 @@
+Lab : Basic SSRF against the local server
+vulnerabale feature : stock check functionality 
+goal : change the stock check url to access admin panel at http://localhost/admin and delate the user carlos 
+
