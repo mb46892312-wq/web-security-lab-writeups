@@ -1,4 +1,9 @@
 Lab : Basic SSRF against the local server
 vulnerabale feature : stock check functionality 
 goal : change the stock check url to access admin panel at http://localhost/admin and delate the user carlos 
-
+exploitation steps : 
+1. trigger the  cheak stock feature 
+2. intercepted the http requat through repeater in the burpsuit 
+3. changed the stock api parameter with http://localhost/admin and send the request to load the local administration panel
+4. found the url end point (/admin/delete?username=carlos) in the html in the respose
+5. now modify the stock api parameter to http://localhost/admin/delete?username=carlos and hit send and the user carlos is deleted
